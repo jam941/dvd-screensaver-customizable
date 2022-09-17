@@ -7,11 +7,13 @@ function (callback) {
 })()
 
 // Create image and set to default if invalid input provided
-var image = new Image(100,200)
+var image = new Image()
 image.src = './sseSmall.svg'
 
 // Ensure canvas shape has same dimensions as image
 image.onload = function () {
+  //rect.width = image.width
+  //rect.height = image.height
   rect.width = image.width
   rect.height = image.height
 }
@@ -32,7 +34,7 @@ function showImage (rect, context) {
 var direction = 'se'
 
 function display (rect, canvas, context) {
-  var speed = 5
+  var speed = 1
 
   // If image hits top
   if (rect.y <= 0) {

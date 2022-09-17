@@ -12,4 +12,6 @@ html, body {
 
 canvas {
     display:block;
+    height: auto;
+    width: auto;
 }
